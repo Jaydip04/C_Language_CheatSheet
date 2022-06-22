@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./prism.css">
+    <script src="./prism.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>C_language_CheatSheet</title>
+    <link rel="icon" type="image/x-icon" href="./logo/Logo.png">
+  </head>
+  <body>
+    <nav>
+      <span class="logo"><img src="./copy.svg" alt="" /></span>
+      <div class="content center">This is <span>C language</span> CheatSheet is For You !</div>
+    </nav>
+    <div class="container">
+      <ol>
+        <li>C Boilerplate :
+            <pre class="language-js">
+              <code>
+#include&#60;stdio.h&#62;
+#include&#60;conio.h&#62;
+int main()
+{
+  clrscr();
+  getch();
+  return 0;
+}</code>
+</pre>
+        </li>
+
+        <li><p>Syntax to declare a variable :</p>
+          <pre class="language-js">
+            <code>
+type variable_list;  </code>
+          </pre>
+      </li>
+
+        <li>Syntax of the if statement :
+          <pre class="language-js">
+            <code>
+if(expression){  
+  //code to be executed  
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of the if-else statement :
+          <pre class="language-js">
+            <code>
+if(expression){  
+  //code to be executed if condition is true  
+}else{  
+  //code to be executed if condition is false  
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of the if else-if ladder statement :
+          <pre class="language-js">
+            <code>
+if(condition1){  
+  //code to be executed if condition1 is true  
+}
+else if(condition2){  
+  //code to be executed if condition2 is true  
+}  
+else if(condition3){  
+  //code to be executed if condition3 is true  
+}  
+...  
+else{  
+  //code to be executed if all the conditions are false  
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of switch statement :
+          <pre class="language-js">
+            <code>
+switch(expression){    
+  case value1:    
+    //code to be executed;    
+    break;  //optional  
+  case value2:    
+    //code to be executed;    
+    break;  //optional  
+    ......    
+                    
+  default:     
+    //code to be executed if all cases are not matched;    
+}</code>
+</pre>
+      </li>
+
+        <li>Syntax of Nested switch case statement :
+          <pre class="language-js">
+            <code>
+switch(expression){    
+  case value1:    
+    //code to be executed;    
+    break;  //optional  
+  case value2:    
+    switch(expression){    
+      case value1:    
+        //code to be executed;    
+        break;  //optional  
+      case value2:    
+        //code to be executed;    
+        break;  //optional  
+        ......                     
+      default:     
+        //code to be executed if all cases are not matched;    
+      }
+    ......                
+  default:     
+    //code to be executed if all cases are not matched;    
+}</code>
+</pre>
+      </li>
+
+      <li>Syntax of do-while loop :
+        <pre class="language-js">
+          <code>
+do{  
+  //code to be executed  
+}while(condition);</code>
+</pre>
+    </li>
+
+      <li>Syntax of while loop :
+        <pre class="language-js">
+          <code>
+while(condition){  
+  //code to be executed  
+} </code>
+</pre>
+    </li>
+
+      <li>Syntax of for loop :
+        <pre class="language-js">
+          <code>
+for(Expression 1; Expression 2; Expression 3){  
+  //code to be executed  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of nested do..while loop :
+        <pre class="language-js">
+          <code>
+do  
+{  
+    do  
+    {   
+      // inner loop statements.  
+    }while(condition);  
+    // outer loop statements.  
+}while(condition);</code>
+</pre>
+    </li>
+
+      <li>Syntax of nested while loop :
+        <pre class="language-js">
+          <code>
+while(condition)  
+{  
+  while(condition)  
+  {  
+    // inner loop statements.  
+  }  
+  // outer loop statements.  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of nested for loop :
+        <pre class="language-js">
+          <code>
+for (initialization; condition; update)   
+{  
+  for(initialization; condition; update)  
+  {  
+    // inner loop statements.  
+  }  
+  // outer loop statements.  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of infinite do..while loop :
+        <pre class="language-js">
+          <code>
+do  
+{  
+  // body of the loop..  
+}while(1);  </code>
+</pre>
+    </li>
+
+      <li>Syntax of infinite while loop :
+        <pre class="language-js">
+          <code>
+while(1)  
+{  
+  // body of the loop..  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of infinite for loop :
+        <pre class="language-js">
+          <code>
+for(; ;)  
+{  
+// body of the for loop.  
+}  </code>
+</pre>
+    </li>
+
+      <li>Syntax of break statement :
+        <pre class="language-js">
+          <code>
+//loop or switch case   
+break;</code>
+</pre>
+    </li>
+
+      <li>Syntax of continue statement :
+        <pre class="language-js">
+          <code>
+//loop statements  
+continue;  
+//some lines of the code which is to be skipped  </code>
+</pre>
+    </li>
+
+      <li>Syntax of goto statement :
+        <pre class="language-js">
+          <code>
+label:   
+//some part of the code;   
+goto label;   </code>
+</pre>
+    </li>
+
+      <li>Syntax of Type Casting :
+        <pre class="language-js">
+          <code>
+(type)value;</code>
+</pre>
+    </li>
+
+      <li>Syntax of function :
+       <pre class="language-js">
+return_type function_name(data_type parameter...){  
+//code to be executed  
+}</code>
+</pre>
+    </li>
+
+      <li>Syntax of 1-D array :
+       <pre class="language-js">
+data_type array_name[array_size];</code>
+</pre>
+    </li>
+
+      <li>Syntax of 2-D array :
+       <pre class="language-js">
+data_type array_name[rows][columns];</code>
+</pre>
+    </li>
+
+      <li>Syntax of Pointers :
+       <pre class="language-js">
+data_type *var_name;</code>
+</pre>
+    </li>
+
+      <li>Syntax of pointer to pointer :
+       <pre class="language-js">
+int **p;</code>
+</pre>
+    </li>
+
+      <li>Syntax of malloc() function :
+       <pre class="language-js">
+ptr=(cast-type*)malloc(byte-size);</code>
+</pre>
+    </li>
+
+      <li>Syntax of calloc() function :
+       <pre class="language-js">
+ptr=(cast-type*)calloc(number, byte-size);</code>
+</pre>
+    </li>
+
+      <li>Syntax of realloc() function :
+       <pre class="language-js">
+ptr=realloc(ptr, new-size);</code>
+</pre>
+    </li>
+
+      <li>Syntax of free() function :
+       <pre class="language-js">
+free(ptr);</code>
+</pre>
+    </li>
+
+      <li>Syntax of string :
+       <pre class="language-js">
+char c[] = "...";</code>
+</pre>
+    </li>
+
+      <li>Syntax of gets() function :
+       <pre class="language-js">
+char[] gets(char[]);  </code>
+</pre>
+    </li>
+
+      <li>Syntax of puts() function :
+       <pre class="language-js">
+int puts(char[]);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strlen() function :
+       <pre class="language-js">
+strlen(string_name);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strcpy() function :
+       <pre class="language-js">
+strcpy(destination, source);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strcat() function :
+       <pre class="language-js">
+strcat(first_string, second_string);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strcmp() function :
+       <pre class="language-js">
+strcmp(first_string, second_string);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strrev() function :
+       <pre class="language-js">
+strrev(string);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strlwr() function :
+       <pre class="language-js">
+strlwr(string);</code>
+</pre>
+    </li>
+
+      <li>Syntax of strupr() function :
+       <pre class="language-js">
+strupr(string);</code>
+</pre>
+    </li>
+
+      <li>Syntax of Structure :
+       <pre class="language-js">
+struct structure_name   
+{  
+  data_type member1;  
+  data_type member2;  
+  .  
+  .  
+  data_type memeberN;  
+}Accessing variable;</code>
+</pre>
+    </li>
+
+    <li>Syntax of typedef :
+     <pre class="language-js">
+typedef &#60;existing_name&#62; &#60;alias_name&#62;  </code>
+</pre>
+  </li>
+
+    <li>Syntax of union :
+     <pre class="language-js">
+union union_tag {
+member definition;
+member definition;
+...
+member definition;
+} one_or_more_union_variables;</code>
+</pre>
+  </li>
+  </ol>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p>Copyright © 2022 All rights reserved.<br>
+          This website created by<span> J.R.Tank</span></p>
+      </div>
+    </footer>
+  </body>
+</html>
